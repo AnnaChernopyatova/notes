@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .noteForm_label{
+            display: block;
+            margin: 30px;
+        }
+
+        .noteForm_button{
+            margin-left: 30px;
+        }
+
+        .noteForm_textinput{
+            width: 30vw;
+            height: 9vh;
+        }
+
+        .notesSpace{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .newNote{
+            width: 30vw;
+            height: fit-content;
+            border: 2px solid rgb(97, 88, 88);
+            margin-top: 2vh;
+            margin-left: 2vw;
+        }
+
+        .newNote_text{
+            width: 28vw;
+            margin-left: 5px;
+        }
+
+        .noteForm_alert{
+            color: red;
+            text-decoration: underline red;
+            display: none;
+            margin-left: 30px;
+        }
+    </style>
+</head>
+<body>
+    <form class="noteForm">
+        <label class="noteForm_label">Введите заголовок заметки: <input id = "header" name="header" type="text" required></label>
+        <label class="noteForm_label">Введите заметку: <textarea id="note" class="noteForm_textinput"></textarea></label>
+        <button type="button" onclick="addNote()" class="noteForm_button">Добавить</button>
+        <span class="noteForm_alert" id="alert">Вы должны добавить заголовок</span>
+    </form>
+    <div id = "notesSpace" class="notesSpace">
+
+    </div>
+
+    <script src="notes.js">
+        
+    </script>
+</body>
+</html>
